@@ -1,0 +1,189 @@
+/* شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #FF1493, #FF69B4);
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.signup-btn,
+.login-btn {
+    background-color: #F8BBD0;
+    /* وردي فاتح ناعم */
+    color: #880E4F;
+    /* لون نص أغمق لمزيد من الوضوح */
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* ظل خفيف */
+}
+
+.signup-btn:hover,
+.login-btn:hover {
+    background-color: #F48FB1;
+    /* وردي أغمق عند التحويم */
+    transform: translateY(-2px);
+    /* تأثير ارتفاع خفيف */
+}
+
+.signup-btn:active,
+.login-btn:active {
+    background-color: #C2185B;
+    /* لون داكن عند الضغط */
+    transform: translateY(1px);
+    /* ضغط بسيط للأسفل */
+}
+
+/* تنسيق الحاوية الأساسية */
+.profile-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* تنسيق صورة المربية */
+#sitter-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff4b8b;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* تنسيق المعلومات الشخصية */
+.profile-info p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #e6005c;
+    font-weight: bold;
+    /* لون القيمة */
+    font-weight: bold;
+    /* لون العنوان (اسم الحقل) */
+}
+
+/* تنسيق السيرة الذاتية */
+.bio-container {
+    background-color: #ffe3ec;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* تنسيق التقييم بالنجوم */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 26px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.selected {
+    color: gold;
+}
+
+/* تنسيق صندوق المربية */
+.sitter-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sitter-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* زر عرض الملف الشخصي وزر الحجز */
+.view-profile,
+.book-now {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.view-profile {
+    background-color: white;
+    color: #ff4b8b;
+    border: 2px solid #ff4b8b;
+}
+
+.view-profile:hover {
+    background-color: #ff4b8b;
+    color: white;
+}
+
+.button,
+.book-now {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff4b8b, #ff73a4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover,
+.book-now:hover {
+    background: linear-gradient(to right, #e6005c, #ff4b8b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,109 @@
+/* خلفية الصفحة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffc0cb, #ff69b4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* الهيدر */
+header {
+    background-color: #ff1493;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* صندوق تسجيل الدخول */
+.login-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* العنوان */
+h2 {
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+/* حقول الإدخال */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* زر تسجيل الدخول */
+button {
+    width: 80%;
+    padding: 12px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+/* تفعيل وإلغاء تفعيل إظهار كلمة المرور */
+/* تحسين تنسيق إظهار كلمة المرور */
+.password-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* يجعل العناصر في المنتصف */
+    gap: 8px;
+    /* يضيف تباعد بين الصندوق والنص */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.password-toggle input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.password-toggle label {
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+}
+
+/* الروابط */
+.forgot-password,
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #ff1493;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

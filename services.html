@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SWEET-BaBYSITTER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fde4ec;
+            margin: 0;
+            padding: 0;
+            color: #6a1b9a;
+        }
+
+        header {
+            background-color: #e91e63;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        #services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .service {
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            width: 250px;
+            color: #880e4f;
+            border: 2px solid #e91e63;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            background-color: #f8bbd0;
+        }
+
+        #service-details {
+            display: none;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #6a1b9a;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <p>Discover how SWEET-BaBYSITTER helps parents and babysitters connect safely and efficiently.</p>
+    </header>
+    <section id="services">
+        <div class="service" onclick="showDetails('parents')">
+            <h2>For Parents</h2>
+            <p>Find a trusted babysitter, book easily, and leave a review.</p>
+        </div>
+        <div class="service" onclick="showDetails('babysitters')">
+            <h2>For Babysitters</h2>
+            <p>Create your profile, get bookings, and build your reputation.</p>
+        </div>
+        <div class="service" onclick="showDetails('security')">
+            <h2>Security & Quality</h2>
+            <p>We follow strict standards to ensure safety for children and babysitters.</p>
+        </div>
+        <div class="service" onclick="showDetails('support')">
+            <h2>24/7 Support</h2>
+            <p>Our team is available around the clock to assist parents and babysitters.</p>
+        </div>
+    </section>
+    <section id="service-details" class="hidden">
+        <h2 id="details-title"></h2>
+        <p id="details-text"></p>
+        <button onclick="hideDetails()">Close</button>
+    </section>
+    <button onclick="goToHome()">Go to Home</button>
+    <script>
+        function showDetails(service) {
+            const details = {
+                parents: "You can search for a babysitter, check their reviews, and book them easily.",
+                babysitters: "Create your profile, find job opportunities, and receive positive reviews.",
+                security: "We ensure safety through babysitter verification and parent reviews.",
+                support: "Our 24/7 support team is ready to assist with any issues or inquiries you may have."
+            };
+            document.getElementById("details-title").innerText = service === 'parents' ? "For Parents" : service === 'babysitters' ? "For Babysitters" : service === 'security' ? "Security & Quality" : "24/7 Support";
+            document.getElementById("details-text").innerText = details[service];
+            document.getElementById("service-details").style.display = "block";
+        }
+        function hideDetails() {
+            document.getElementById("service-details").style.display = "none";
+        }
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

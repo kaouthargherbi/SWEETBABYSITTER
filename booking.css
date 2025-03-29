@@ -1,0 +1,94 @@
+/* الشريط العلوي */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #FF1493, #FF69B4);
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* تنسيق الصفحة */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #FFF0F5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #C2185B;
+    margin-top: 20px;
+}
+
+/* تنسيق الفورم */
+form {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid #FF69B4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* زر الحجز */
+button {
+    background-color: #F8BBD0;
+    color: #880E4F;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #F48FB1;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #C2185B;
+    transform: translateY(1px);
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e9f1;
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    margin-top: 20px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #d63384;
+    object-fit: cover;
+}
+
+.profile-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.profile-info h2 {
+    font-size: 22px;
+    color: white;
+    background-color: #d63384;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.profile-info p {
+    font-weight: bold;
+    color: #d63384;
+}
+
+.profile-info span {
+    font-weight: normal;
+    color: black;
+}
+
+.edit-btn,
+.request-btn {
+    display: block;
+    background-color: #d63384;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.edit-btn:hover,
+.request-btn:hover {
+    background-color: #b42a6f;
+}

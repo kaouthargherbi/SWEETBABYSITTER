@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <script defer src="edit-profile.js"></script>
+    <link rel="stylesheet" href="edit-profile.css">
+</head>
+
+<body>
+    <nav>
+        Edit Profile
+    </nav>
+    <div class="profile-container">
+        <div class="profile-photo">
+            <img id="preview-img" src="default-profile.png" alt="Profile Photo">
+            <label for="profile-pic" class="custom-file-upload">Change Photo</label>
+            <input type="file" id="profile-pic" accept="image/*">
+        </div>
+        <div class="profile-info">
+            <h1>Edit Your Profile</h1>
+            <form id="edit-profile-form">
+                <label for="family-name">Family Name:</label>
+                <input type="text" id="family-name" required>
+
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" pattern="[0-9]{10}" required>
+
+                <label for="price">Price per Hour:</label>
+                <input type="number" id="price" min="1" required>
+
+                <div class="bio-section">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" required></textarea>
+                </div>
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

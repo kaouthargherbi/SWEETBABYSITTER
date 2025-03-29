@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Requests</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Booking Requests</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Number</th>
+                <th>Children</th>
+                <th>Other</th>
+            </tr>
+        </thead>
+        <tbody id="requestsTable"></tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            let table = document.getElementById("requestsTable");
+
+            bookings.forEach(booking => {
+                let row = table.insertRow();
+                row.innerHTML = ` 
+                <td>${booking.fullName}</td>  
+                <td>${booking.number}</td>  
+                <td>${booking.children}</td>  
+                <td>${booking.other}</td>  `
+                    ;
+            });
+        });  
+    </script>
+
+</body>
+
+</html>

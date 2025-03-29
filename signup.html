@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Sweet Babysitter</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="parent">Parent</option>
+                    <option value="babysitter">Babysitter</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" pattern="^[A-Za-z ]+$" title="Only letters and spaces allowed" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div id="extra-fields" style="display: none;">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" pattern="\d{10}" title="Phone number must be exactly 10 digits"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience (years)</label>
+                    <input type="number" id="experience" min="1" max="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="rate">Hourly Rate (DA)</label>
+                    <input type="number" id="rate" min="1" step="0.01" required>
+                </div>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('user-type').addEventListener('change', function () {
+            document.getElementById('extra-fields').style.display = this.value === 'babysitter' ? 'block' : 'none';
+        });
+    </script>
+    <script src="signup.js"></script>
+</body>
+
+</html>
