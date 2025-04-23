@@ -5,8 +5,6 @@ body {
     background-color: #ffe4e1;
 }
 
-/* تنسيق الـ Header */
-/* شريط التنقل الجديد */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,13 +14,11 @@ body {
     color: white;
 }
 
-/* تنسيق الشعار */
 .logo {
     font-size: 22px;
     font-weight: bold;
 }
 
-/* تنسيق الروابط */
 .nav-links {
     list-style: none;
     padding: 0;
@@ -46,7 +42,6 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* تحسين عرض نموذج الاتصال */
 .contact-container {
     width: 80%;
     max-width: 400px;

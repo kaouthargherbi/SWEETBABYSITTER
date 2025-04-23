@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let userData = JSON.parse(localStorage.getItem("currentUser")) || {};
 
-    // التأكد من أن العناصر موجودة قبل تعيين القيم
     document.getElementById("sitter-photo").src = userData.profilePic || "assets/images/default-profile.png";
     document.getElementById("family-name").textContent = userData.lastName ?? "Not set";
     document.getElementById("first-name").textContent = userData.firstName ?? "Not set";
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("price").textContent = userData.rate ?? "Not set";
     document.getElementById("bio").textContent = userData.bio ?? "No bio available.";
 
-    // ميزة التقييم بالنجوم
     const stars = document.querySelectorAll(".star");
     stars.forEach(star => {
         star.addEventListener("click", function () {
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // استرجاع التقييم السابق إذا كان موجودًا
     let savedRating = localStorage.getItem("babysitter-rating");
     if (savedRating) {
         updateStars(savedRating);

@@ -1,4 +1,3 @@
-/* الشريط العلوي */
 nav {
     display: flex;
     justify-content: space-between;
@@ -36,7 +35,6 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* تنسيق الصفحة */
 body {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -51,7 +49,6 @@ h2 {
     margin-top: 20px;
 }
 
-/* تنسيق الفورم */
 form {
     background: white;
     padding: 20px;
@@ -73,7 +70,6 @@ button {
     font-size: 16px;
 }
 
-/* زر الحجز */
 button {
     background-color: #F8BBD0;
     color: #880E4F;

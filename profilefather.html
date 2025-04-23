@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Your Profile</title>
+    <link rel="icon" sizes="100x100" href="logo.png">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #FF1493, #FF69B4);
+            padding: 15px 20px;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #ff66b2, #ffb3d9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form-box h2 {
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-box button {
+            background-color: #ff1493;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .form-box button:hover {
+            background-color: #e60073;
+        }
+
+        .message {
+            display: none;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Sweet Babysitter</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="find-babysitter.html">Find a Babysitter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="logout.html">Logout</a></li>
+
+        </ul>
+    </div>
+    <div class="form-box">
+        <h2>Complete Your Profile</h2>
+        <form id="profileForm">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="number" name="children" placeholder="Number of Children" min="0" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <button type="submit">Save</button>
+            <div class="message" id="successMessage">Profile saved! Redirecting...</div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("profileForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+
+            document.getElementById("successMessage").style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = 'saveprofilefather.html';
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>

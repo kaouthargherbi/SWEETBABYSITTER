@@ -1,4 +1,3 @@
-/* خلفية الصفحة */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +10,6 @@ body {
     height: 100vh;
 }
 
-/* الهيدر */
 header {
     background-color: #ff1493;
     width: 100%;
@@ -23,7 +21,6 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* صندوق تسجيل الدخول */
 .login-container {
     background: white;
     padding: 25px;
@@ -34,13 +31,11 @@ header {
     margin-top: 20px;
 }
 
-/* العنوان */
 h2 {
     color: #ff1493;
     margin-bottom: 15px;
 }
 
-/* حقول الإدخال */
 input {
     width: 80%;
     padding: 12px;
@@ -50,7 +45,6 @@ input {
     font-size: 16px;
 }
 
-/* زر تسجيل الدخول */
 button {
     width: 80%;
     padding: 12px;
@@ -67,15 +61,11 @@ button:hover {
     background-color: #e60073;
 }
 
-/* تفعيل وإلغاء تفعيل إظهار كلمة المرور */
-/* تحسين تنسيق إظهار كلمة المرور */
 .password-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* يجعل العناصر في المنتصف */
     gap: 8px;
-    /* يضيف تباعد بين الصندوق والنص */
     font-size: 14px;
     margin-top: 5px;
 }
@@ -92,7 +82,6 @@ button:hover {
     font-size: 14px;
 }
 
-/* الروابط */
 .forgot-password,
 .signup-link {
     margin-top: 10px;

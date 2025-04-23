@@ -23,10 +23,14 @@ document.getElementById('signup-form').addEventListener('submit', function (even
         babysitters.push(userData);
         localStorage.setItem("babysitters", JSON.stringify(babysitters));
     }
-
+    if (userType === "parent") {
+        let parents = JSON.parse(localStorage.getItem("parents")) || [];
+        parents.push(userData);
+        localStorage.setItem("parents", JSON.stringify(parents));
+    }
     // تخزين بيانات المستخدم الحالي
     localStorage.setItem("currentUser", JSON.stringify(userData));
 
     alert("Signup successful!");
-    window.location.href = userType === "parent" ? "find-babysitter.html" : "edit-profile.html";
+    window.location.href = userType === "parent" ? "profilefather.html" : "edit-profile.html";
 });

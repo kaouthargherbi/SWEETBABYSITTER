@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const userData = JSON.parse(localStorage.getItem("currentUser")) || {};
 
-    // التأكد من أن العناصر موجودة قبل تعيين القيم
     document.getElementById("family-name").textContent = userData.lastName ?? "Not set";
     document.getElementById("first-name").textContent = userData.firstName ?? "Not set";
     document.getElementById("email").textContent = userData.email ?? "Not set";

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Logout</title>
+    <link rel="icon" sizes="100x100" href="logo.png">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #FF1493, #FF69B4);
+            padding: 15px 20px;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 70px;
+            width: 70px;
+            margin-right: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            /* اختياري */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            /* ظل خفيف */
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #ff66b2, #ffb3d9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirm-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            margin-top: 100px;
+        }
+
+        .confirm-box h2 {
+            color: #ff1493;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff1493;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e60073;
+        }
+
+        .message {
+            display: none;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Sweet Babysitter</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="find-babysitter.html">Find a Babysitter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="confirm-box">
+        <h2>Are you sure you want to log out?</h2>
+        <form onsubmit="handleLogout(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit">Confirm Logout</button>
+        </form>
+        <div class="message" id="logoutMessage">You have been logged out successfully. Redirecting...</div>
+    </div>
+    <script>
+        function handleLogout(event) {
+            event.preventDefault();
+            const message = document.getElementById('logoutMessage');
+            message.style.display = 'block';
+
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    </script>
+
+</body>
+
+</html>

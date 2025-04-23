@@ -2,33 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking Requests</title>
+    <link rel="icon" sizes="100x100" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <style>
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffe6f0, #fdd0e6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #d63384;
+            font-size: 32px;
+            text-shadow: 1px 1px 2px #fff;
+            animation: fadeInDown 1s ease-in-out;
         }
 
         table {
-            margin: 20px auto;
+            margin: 30px 0;
+            width: 90%;
+            max-width: 900px;
             border-collapse: collapse;
-            width: 80%;
+            box-shadow: 0 0 15px rgba(214, 51, 132, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeInUp 1.2s ease-in-out;
         }
 
-        th,
+        th {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
         td {
-            border: 1px solid black;
-            padding: 10px;
+            background-color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            color: #444;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover td {
+            background-color: #ffe6f2;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .empty-msg {
+            color: #888;
+            font-size: 18px;
+            margin-top: 30px;
         }
     </style>
-
 </head>
 
 <body>
     <h2>Booking Requests</h2>
-    <table>
+    <table id="tableWrapper" style="display:none;">
         <thead>
             <tr>
                 <th>Full Name</th>
@@ -40,23 +105,32 @@
         <tbody id="requestsTable"></tbody>
     </table>
 
+    <div id="emptyMessage" class="empty-msg" style="display:none;">
+        لا توجد حجوزات حالياً.
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
             let table = document.getElementById("requestsTable");
+            let tableWrapper = document.getElementById("tableWrapper");
+            let emptyMessage = document.getElementById("emptyMessage");
 
-            bookings.forEach(booking => {
-                let row = table.insertRow();
-                row.innerHTML = ` 
-                <td>${booking.fullName}</td>  
-                <td>${booking.number}</td>  
-                <td>${booking.children}</td>  
-                <td>${booking.other}</td>  `
-                    ;
-            });
-        });  
+            if (bookings.length > 0) {
+                tableWrapper.style.display = "table";
+                bookings.forEach(booking => {
+                    let row = table.insertRow();
+                    row.innerHTML = `
+            <td>${booking.fullName}</td>  
+            <td>${booking.number}</td>  
+            <td>${booking.children}</td>  
+            <td>${booking.other}</td>`;
+                });
+            } else {
+                emptyMessage.style.display = "block";
+            }
+        });
     </script>
-
 </body>
 
 </html>

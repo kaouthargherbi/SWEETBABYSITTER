@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const babysitters = JSON.parse(localStorage.getItem("babysitters")) ?? []; // تجنب الخطأ عند عدم وجود بيانات
-
+    const babysitters = JSON.parse(localStorage.getItem("babysitters")) ?? [];
     const listContainer = document.getElementById("babysitter-list");
     const searchBox = document.getElementById("searchBox");
 
     function displayBabysitters(filteredBabysitters) {
-        listContainer.innerHTML = ""; // مسح القائمة قبل إعادة الإضافة
+        listContainer.innerHTML = "";
 
         filteredBabysitters.forEach((babysitter, index) => {
             const div = document.createElement("div");
