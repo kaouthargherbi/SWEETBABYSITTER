@@ -135,6 +135,17 @@
         document.getElementById("profileForm").addEventListener("submit", function (e) {
             e.preventDefault();
 
+            const firstName = document.querySelector('[name="firstName"]').value;
+            const lastName = document.querySelector('[name="lastName"]').value;
+            const children = document.querySelector('[name="children"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const phone = document.querySelector('[name="phone"]').value;
+
+            localStorage.setItem("firstName", firstName);
+            localStorage.setItem("lastName", lastName);
+            localStorage.setItem("children", children);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phone", phone);
 
             document.getElementById("successMessage").style.display = 'block';
 
