@@ -130,9 +130,18 @@
     </div>
 
     <script>
+        const firstName = localStorage.getItem("firstName") || "First";
+        const lastName = localStorage.getItem("lastName") || "Last";
+        const fullName = firstName + " " + lastName;
+        const email = localStorage.getItem("email") || "example@example.com";
+        const phone = localStorage.getItem("phone") || "N/A";
+        const children = localStorage.getItem("children") || "0";
 
+        document.getElementById("fullName").textContent = fullName;
+        document.getElementById("email").textContent = email;
+        document.getElementById("phone").textContent = phone;
+        document.getElementById("children").textContent = children;
     </script>
-
 </body>
 
 </html>
